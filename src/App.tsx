@@ -1,7 +1,16 @@
-import { greet } from "./utils/greet";
+import { useState } from "react";
+import ControlBoard from "./components/ControlBoard";
+import DisplayBoard from "./components/DisplayBoard";
+import PageHeader from "./components/PageHeader";
 
 function App(): JSX.Element {
-  return <h1>{greet("World")}</h1>;
-}
+  const [currentNumber, setNumber] = useState(0)
+  return (
+  <>
+  <PageHeader/>
+  <DisplayBoard num={currentNumber}/>
+  <ControlBoard setState={setNumber} state={currentNumber}/>
+  </>
+)}
 
 export default App;
