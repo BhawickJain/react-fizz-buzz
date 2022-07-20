@@ -4,14 +4,15 @@ import DisplayBoard from "./components/DisplayBoard";
 import PageHeader from "./components/PageHeader";
 
 function App(): JSX.Element {
-  const [currentNumbers, setNumber] = useState<number[]>([0])
-  console.log(currentNumbers)
+  const [currentNumbers, setNumber] = useState<number[]>([0]);
+  console.log(currentNumbers);
   return (
-  <>
-  <PageHeader/>
-  <DisplayBoard num={currentNumbers[currentNumbers.length - 1]}/>
-  <ControlBoard setState={setNumber} state={currentNumbers}/>
-  </>
-)}
+    <>
+      <PageHeader />
+      <DisplayBoard num={currentNumbers[currentNumbers.length - 1]} />
+      <ControlBoard setState={setNumber} state={currentNumbers} />
+    </>
+  );
+}
 
 export default App;

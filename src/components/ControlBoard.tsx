@@ -1,16 +1,15 @@
 interface ControlBoardState {
-    state: number[],
-    setState: React.Dispatch<React.SetStateAction<number[]>> 
+  state: number[];
+  setState: React.Dispatch<React.SetStateAction<number[]>>;
 }
-const ControlBoard = ({state, setState}:ControlBoardState): JSX.Element => {
+const ControlBoard = ({ state, setState }: ControlBoardState): JSX.Element => {
+  const handleNext = () => {
+    setState(() => [...state, state[state.length - 1] + 1]);
+  };
 
-   const handleNext = () => {
-    setState(() => [...state, state[state.length - 1] + 1])
-   }
-
-   const handleReset = () => {
-    setState(() => [0])
-   }
+  const handleReset = () => {
+    setState(() => [0]);
+  };
 
   return (
     <div className="control">

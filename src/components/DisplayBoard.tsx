@@ -1,13 +1,11 @@
-import { evaluateFizzBuzz } from "../utils/evaluateFizzBuzz"
+import { evaluateFizzBuzz } from "../utils/evaluateFizzBuzz";
 
 interface NumberProp {
-    num: number
+  num: number;
 }
 
-const DisplayBoard = ({num}: NumberProp): JSX.Element => {
-    return (
-  <div className="fizz-buzz">{evaluateFizzBuzz(num)}</div>
-    )
-}
+const DisplayBoard = ({ num }: NumberProp): JSX.Element => {
+  return <div className="fizz-buzz">{evaluateFizzBuzz(num)}</div>;
+};
 
-export default DisplayBoard
+export default DisplayBoard;
